@@ -1,0 +1,38 @@
+<!-- vim:set ft=xhtml ts=4 sw=4 sts=4 autoindent: encoding=utf-8: -->
+<!DOCTYPE html>
+
+<html lang="en-GB" xml:lang="en-GB" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <!-- Most browsers won't need this but still, better safe... -->
+        <link rel="shortcut icon" href="favicon.ico"/>
+        
+        <title>
+            picard - make it so
+        </title>
+        
+        <!-- Our standard style -->
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+
+        <!-- Javascript section -->
+        <!-- Enable parallel downloading of js from the server -->
+        <script type="text/javascript" src="lib/head.min.js"></script>
+        <script type="text/javascript">
+            head.js(
+                    'lib/jquery.min.js',
+                    'lib/jquery.svg.min.js',
+                    'src/js/picard.js'
+                   );
+            head.ready(function() {
+                // To the stars!
+                var picard = new Picard('#picard', '#input_file');
+                picard.run();
+            });
+        </script>
+    </head>
+    <body>
+        <!-- name is necessary? -->
+        <input type="file" id="input_file"/>
+        <div id="picard">
+        </div>
+    </body>
+</html>
