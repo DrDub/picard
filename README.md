@@ -10,7 +10,7 @@ You need the following:
 * A way to serve web pages
 * A modern standards-compliant web browser
 
-coffee: http://coffeescript.org/
+[coffee]: http://coffeescript.org/
 
 Once you have installed the above dependencies:
 
