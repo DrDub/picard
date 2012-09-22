@@ -47,7 +47,7 @@ class Picard
         for lbl, lbl_pos of lbl_space
             x_pos = BORDER + lbl_pos[0] * (WIDTH - BORDER)
             y_pos = BORDER + lbl_pos[1] * (HEIGHT - BORDER)
-            @svg.text x_pos, y_pos, lbl
+            @svg.text x_pos, y_pos, lbl, 'text-anchor': 'middle'
 
 # Export to the global namespace
 root = exports ? this
