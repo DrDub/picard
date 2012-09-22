@@ -40,16 +40,13 @@ class Picard
             soup = line.split '\t'
             lbl = soup[0]
             lbl_pos = (parseFloat val for val, i in soup when i > 0)
-            console.log lbl_pos
             lbl_space[lbl] = lbl_pos
         @visualise lbl_space
 
     visualise: (lbl_space) ->
         for lbl, lbl_pos of lbl_space
-            console.log lbl_pos[0], lbl_pos[1]
             x_pos = BORDER + lbl_pos[0] * (WIDTH - BORDER)
             y_pos = BORDER + lbl_pos[1] * (HEIGHT - BORDER)
-            console.log x_pos, y_pos
             @svg.text x_pos, y_pos, lbl
 
 # Export to the global namespace
