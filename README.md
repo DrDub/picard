@@ -2,6 +2,8 @@
 
     To boldly go to the final frontiers of your word spaces
 
+![Screenshot](screenshot.png)
+
 ## Development ##
 
 You need the following:
